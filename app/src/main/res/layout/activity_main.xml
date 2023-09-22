@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/search_view_bg"
+            android:gravity="center"
+            app:iconifiedByDefault="false"
+            app:queryHint="Search Food" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Cusines"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <ImageButton
+                    android:id="@+id/ic_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:onClick="allCuisines"
+                    android:src="@drawable/ic_arrow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-125dp"
+                    android:layout_marginTop="50dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/horizonCuisines"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-380dp"
+                        android:layout_marginTop="170dp"
+                        android:text="Have no idea?\nTry out Today's Recommends!"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recomRecipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-335dp"
+                        android:layout_marginTop="230dp"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
